@@ -7,13 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ClipOut
-  m_Shader: {fileID: 4800000, guid: 714b2bb9b01d217489cfe8907bec0eb1, type: 3}
+  m_Name: WireFrame 2
+  m_Shader: {fileID: 4800000, guid: ab9f09196ef2eca44b47302c0bada5ca, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -35,15 +35,27 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _DetailTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 846ebb0f3fe3b6f47aa95cfe0408617e, type: 3}
+        m_Scale: {x: 0.1, y: 0.1}
+        m_Offset: {x: 0, y: -0.1}
+    - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
+    - _MetallicMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -55,10 +67,17 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SecTex:
+        m_Texture: {fileID: 2800000, guid: 846ebb0f3fe3b6f47aa95cfe0408617e, type: 3}
+        m_Scale: {x: 0.8, y: 0.8}
+        m_Offset: {x: 0, y: -0.8}
     m_Floats:
+    - _BumpItOffset: 0.07
     - _BumpScale: 1
     - _Cutoff: 0.5
+    - _DetailBumpScale: 1
     - _DetailNormalMapScale: 1
+    - _Displacement: 45
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -67,13 +86,19 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _ParallaxStrength: 0
+    - _Smoothness: 0.1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
+    - _WireframeVal: 0.013
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.9622642, g: 0.8849393, b: 0, a: 1}
-    - _Color2: {r: 0.9339623, g: 0, b: 0.63729197, a: 1}
+    - _BackColor: {r: 0, g: 0.61144805, b: 1, a: 1}
+    - _BaseColor: {r: 0, g: 0.03537737, b: 0.05660379, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Emission: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _LightDir: {r: 0, g: 1, b: 0, a: 1}
+    - _FrontColor: {r: 1, g: 0.18396229, b: 0.9171869, a: 1}
+    - _WireColor: {r: 0, g: 0.5974078, b: 1, a: 1}

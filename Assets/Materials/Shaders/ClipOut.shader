@@ -4,6 +4,7 @@
     {
 		_Color("Color Top", Color) = (0.086, 0.407, 1, 0.749)
 		_Color2("Color Bottom", Color) = (0.086, 0.407, 1, 0.749)
+		_LightDir("Light Direction", Float) = (0,1,0.1)
     }
     SubShader
     {
@@ -37,6 +38,8 @@
 
 			float4 _Color;
 			float4 _Color2;
+			float3 _LightDir;
+			uniform float _BumpIt;
 
             v2f vert (appdata v)
             {
@@ -51,13 +54,12 @@
             fixed4 frag (v2f i) : SV_Target
             {
 
-				float3 lightDir = float3(0,1,0);
-				float directLight = dot(i.normal, lightDir);
+				float directLight = dot(i.normal, normalize(_LightDir));
 				//return float4(directLight, 0);
 
 				float rings = -cos((i.uv.y * (50 + pow(60, i.uv.y))) + _Time.w) + step(0.45,1-i.uv.y);
 				clip(rings);		
-				return lerp(_Color2, _Color, directLight+0.1);
+				return lerp(_Color2, _Color, directLight+0.1-_BumpIt/2.3);
             }
             ENDCG
         }

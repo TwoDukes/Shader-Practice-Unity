@@ -88,11 +88,11 @@
 
 				float2 uv = i.uv += float2(_XOffset + _Time.x,_YOffset);
 
-				fixed4 xGrid = smoothstep(LineWidth, LineWidth+LineSmoothness, ((uv.x * _XTile) % 0.1) * (_Width + 10 + _BumpIt * 2));
-				fixed4 yGrid = smoothstep(LineWidth, LineWidth + LineSmoothness,((uv.y * _YTile) % 0.1) * (_Height + 10 + _BumpIt * 2));
+				fixed4 xGrid = smoothstep(LineWidth, LineWidth+LineSmoothness, ((uv.x * _XTile) % 0.1) * (_Width + 10 + _BumpIt * 3));
+				fixed4 yGrid = smoothstep(LineWidth, LineWidth + LineSmoothness,((uv.y * _YTile) % 0.1) * (_Height + 10 + _BumpIt * 3));
 
-				fixed4 rXGrid = smoothstep(1.0 - LineWidth, 1.0 - LineWidth - LineSmoothness, ((uv.x * _XTile) % 0.1) * (10-_Width - _BumpIt*2));
-				fixed4 rYGrid = smoothstep(1.0 - LineWidth, 1.0-LineWidth- LineSmoothness, ((uv.y * _YTile) % 0.1) * (10 - _Height - _BumpIt * 2));
+				fixed4 rXGrid = smoothstep(1.0 - LineWidth, 1.0 - LineWidth - LineSmoothness, ((uv.x * _XTile) % 0.1) * (10-_Width - _BumpIt*3));
+				fixed4 rYGrid = smoothstep(1.0 - LineWidth, 1.0-LineWidth- LineSmoothness, ((uv.y * _YTile) % 0.1) * (10 - _Height - _BumpIt * 3));
 
 
 				fixed4 grids = rXGrid + rYGrid + xGrid + yGrid;

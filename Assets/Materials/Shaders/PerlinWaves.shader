@@ -72,7 +72,7 @@ Shader "Unlit/PerlinWaves"
 				float4 worldPos = mul(unity_ObjectToWorld, v.vertex);
 				float2 uv = TRANSFORM_TEX(v.uv, _MainTex);
 				float3 normalToWorld = normalize(mul(v.normal, unity_WorldToObject).xyz);
-                float4 displacedVert = (v.vertex) + displace(normalToWorld,uv);
+                float4 displacedVert = (v.vertex) + displace(v.normal,uv);
 
 
 				o.nonClipVert = displacedVert;
