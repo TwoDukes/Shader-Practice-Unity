@@ -34,7 +34,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb84e30e02715445aeb9959894e3b4d, type: 3}
   m_Name: ColorGrading
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
@@ -75,7 +75,7 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: 0
+    value: 18
   tint:
     overrideState: 1
     value: 0
@@ -87,7 +87,7 @@ MonoBehaviour:
     value: 0
   saturation:
     overrideState: 1
-    value: 29
+    value: 37
   brightness:
     overrideState: 1
     value: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
     value: 1.11
   contrast:
     overrideState: 1
-    value: 32
+    value: 39
   mixerRedOutRedIn:
     overrideState: 1
     value: 100

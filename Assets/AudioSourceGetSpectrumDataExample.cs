@@ -4,9 +4,11 @@
 [RequireComponent(typeof(AudioSource))]
 public class AudioSourceGetSpectrumDataExample : MonoBehaviour
 {
-    void Update()
+    int count = 0;
+    void FixedUpdate()
     {
         float[] spectrum = new float[256];
+        float spec, spec2 = 0;
 
         AudioListener.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
         float average = 0;
@@ -37,7 +39,17 @@ public class AudioSourceGetSpectrumDataExample : MonoBehaviour
         //    average += (spectrum[i]);
         //}
         // Debug.Log("Average: " + spectrum[1]);
-        float spec = (spectrum[0] + spectrum[1] + spectrum[2] + spectrum[3] + spectrum[4]) / 5.0f;
-        Shader.SetGlobalFloat("_BumpIt", spectrum[0]);
+        if(count == 1)
+        {
+            count = 0;
+            spec = (spectrum[0] + spectrum[1] + spectrum[2] + spectrum[3] + spectrum[4] + spectrum[5]) / 6.0f;
+            Shader.SetGlobalFloat("_BumpIt", (spec+spec2/2.0f));
+        }
+        else
+        {
+            spec2 = (spectrum[0] + spectrum[1] + spectrum[2] + spectrum[3] + spectrum[4] + spectrum[5]) / 6.0f;
+            count++;
+        }
+
     }
 }

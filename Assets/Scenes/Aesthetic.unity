@@ -7053,13 +7053,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1613425555}
-  m_LocalRotation: {x: 0.038982213, y: -0.05400046, z: 0.24938232, w: 0.9661122}
-  m_LocalPosition: {x: -126.72, y: 4.4955, z: -495}
-  m_LocalScale: {x: 588.42303, y: 588.42303, z: 588.42303}
+  m_LocalRotation: {x: 0.035478577, y: -0.10605926, z: -0.30263418, w: 0.9465227}
+  m_LocalPosition: {x: -126, y: 32, z: -495}
+  m_LocalScale: {x: 473.9512, y: 473.9512, z: 473.9512}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 29
-  m_LocalEulerAnglesHint: {x: 5.8690004, y: -4.8960004, z: 28.696001}
+  m_LocalEulerAnglesHint: {x: 0.17, y: -12.841001, z: -35.481003}
 --- !u!1 &1665431438
 GameObject:
   m_ObjectHideFlags: 0
@@ -7571,7 +7571,7 @@ GameObject:
   - component: {fileID: 2013420257}
   - component: {fileID: 2013420256}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

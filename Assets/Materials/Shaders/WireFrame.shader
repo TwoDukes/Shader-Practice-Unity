@@ -60,12 +60,12 @@ Shader "Dustin/Wireframe"
 
 				float4 displace(float3 normal, float2 uv, float2 uv2) {
 
-					float2 uvOffset = float2(uv.x + _Time.x / 10, uv.y + _Time.x / 2);
-					float2 uvOffset2 = float2(uv2.x + _Time.x / 10 + _BumpIt * _BumpItOffset, uv2.y + _Time.x /1.2);
+					float2 uvOffset = float2(uv.x + _Time.x / 10 , uv.y + _Time.x / 2);
+					float2 uvOffset2 = float2(uv2.x + _Time.x / 10 , uv2.y + _Time.x /1.2);
 					fixed4 col = tex2Dlod(_MainTex, float4(uvOffset, 0, 0));
 					fixed4 col2 = tex2Dlod(_SecTex, float4(uvOffset2, 0, 0));
 
-					return float4(normal * ((col.r*2 + col2.r/2) * _Displacement), 0);
+					return float4(normal * ((col.r*2 + col2.r/2) * _Displacement + ((_BumpIt * _BumpItOffset)/ col2.r*5)), 0);
 				}
 
 				v2g vert(appdata v) {
@@ -118,7 +118,7 @@ Shader "Dustin/Wireframe"
 					float3 dpdy = ddy(mul(unity_ObjectToWorld, i.vert));
 					float3 flatNormal = normalize(cross(dpdy, dpdx));
 
-					float3 directLight = pow(10,dot(flatNormal, lightDir));
+					float3 directLight = pow(38,dot(flatNormal, lightDir));
 
 					return float4(_BaseColor * directLight * (1-wire) + (0.15+ _WireColor) * wire,0);
 				}
